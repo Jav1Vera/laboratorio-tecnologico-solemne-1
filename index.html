@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solemne 1</title>
+    <script src="./script.js" type="module"></script>
+</head>
+<style>
+    body{
+        font-family: "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-size: 14px;
+    }
+
+    .chart circle:hover{
+        filter: hue-rotate(90deg);
+        opacity: 1;
+    }
+
+    .etiqueta{
+        border: 1px solid #000000;
+        width: 200px;
+        height: 120px;
+        background-color: beige;
+        display: flex;
+        position: absolute;
+        pointer-events: none;
+    }
+    .etiqueta p{
+        margin: auto;
+        margin-left: 10px;
+    }
+
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: black;
+        shape-rendering: crispEdges;
+}
+</style>
+<body>
+    <div class="container">
+    <svg class="chart" width="1100" height="580">
+        <g class="x-axis"></g>
+        <g class="y-axis"></g>
+    </svg>
+    <div class="info-box">
+        
+    </div>
+    </div>
+</body>
+</html>
