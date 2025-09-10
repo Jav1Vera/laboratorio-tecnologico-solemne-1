@@ -12,41 +12,50 @@
         font-size: 14px;
     }
 
-    .chart circle:hover{
+    .scroll-container {
+    width: 1100px;
+    overflow-x: auto; /* Habilita scroll horizontal ya tu sabe*/
+    border: 1px solid #ccc;
+}
+
+    .chart text{
+        font-family: "Segoe UI", sans-serif;
+        font-size: 13px;
+        fill: #444;
+    }
+    .chart rect:hover{
         filter: hue-rotate(90deg);
         opacity: 1;
     }
 
     .etiqueta{
-        border: 1px solid #000000;
+        border-radius: 6px;
         width: 200px;
         height: 120px;
         background-color: beige;
-        display: flex;
+        display: inline-block;
         position: absolute;
         pointer-events: none;
+        padding: 8px 12px;
+        box-shadow: 0 0 10px rgba(0, 110, 255, 0.3);
     }
     .etiqueta p{
-        margin: auto;
-        margin-left: 10px;
+        margin: 0;
     }
 
-    .axis path,
-    .axis line {
-        fill: none;
-        stroke: black;
-        shape-rendering: crispEdges;
+    .x-axis path, .y-axis path {
+    stroke: #333;
+}
+    .x-axis line, .y-axis line {
+    stroke: #ddd;
 }
 </style>
 <body>
+    <h1>Evolución de la Popularidad de Juegos de Mesa (2000-2025): Análisis Visual Interactivo</h1>
     <div class="container">
-    <svg class="chart" width="1100" height="580">
-        <g class="x-axis"></g>
-        <g class="y-axis"></g>
-    </svg>
-    <div class="info-box">
-        
-    </div>
-    </div>
+  <div class="scroll-container">
+    <svg class="chart"></svg>
+  </div>
+</div>
 </body>
 </html>
